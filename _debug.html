@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html><head><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<nav class="topnav">
+  <a class="logo" href="index.html"><img src="assets/img/logo-wide.png" alt=""></a>
+  <div class="nav-toggle" role="button" tabindex="0" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </div>
+  <div class="navlinks">
+    <a href="#">Home</a>
+    <div class="lang-toggle"><button class="lang-btn active">IT</button></div>
+  </div>
+</nav>
+<pre id="out" style="font-size:14px;padding:20px;"></pre>
+<script>
+  var el = document.querySelector('.nav-toggle');
+  var cs = getComputedStyle(el);
+  var r = el.getBoundingClientRect();
+  var nl = document.querySelector('.navlinks');
+  var nlcs = getComputedStyle(nl);
+  var nlr = nl.getBoundingClientRect();
+  document.getElementById('out').textContent =
+    'innerWidth: ' + window.innerWidth + '\n' +
+    'TOGGLE display: ' + cs.display + ' rect: ' + JSON.stringify(r) + '\n' +
+    'NAVLINKS display: ' + nlcs.display + ' position: ' + nlcs.position + '\n' +
+    'NAVLINKS rect: ' + JSON.stringify(nlr) + '\n' +
+    'topnav width: ' + document.querySelector('.topnav').getBoundingClientRect().width;
+</script>
+</body></html>

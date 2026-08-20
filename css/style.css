@@ -293,6 +293,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .section-white { background: var(--white); padding: 80px 0; }
 .section-pietra { background: var(--pietra); padding: 80px 0; }
+@media (max-width: 560px) {
+  .section-white, .section-pietra { padding: 52px 0; }
+}
 .section-head { text-align: center; margin-bottom: 46px; }
 .section-head h2 { font-size: 32px; margin-top: 10px; }
 .section-head p { color: var(--ink-soft); margin-top: 10px; font-size: 15.5px; }
@@ -343,6 +346,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .info-teaser .line { display: flex; gap: 10px; margin-bottom: 10px; font-size: 15px; color: var(--ink-soft); }
 .info-teaser .line b { color: var(--ink); font-weight: 700; min-width: 92px; display: inline-block; font-family: 'Archivo', sans-serif; }
 
+@media (max-width: 780px) { .info-teaser { grid-template-columns: 1fr; gap: 28px; } }
+
 /* ---------- Signature mark (square logo) ---------- */
 .signature-mark {
   display: flex;
@@ -372,6 +377,11 @@ footer.site-footer .copyright { margin-top: 22px; font-size: 12.5px; opacity: 0.
 .page-hero h1 { font-size: 37px; margin: 12px 0 14px; }
 .page-hero p { color: var(--ink-soft); max-width: 560px; margin: 0 auto; font-size: 15.5px; line-height: 1.6; }
 
+@media (max-width: 560px) {
+  .page-hero { padding: 44px 0 36px; }
+  .page-hero h1 { font-size: 28px; }
+}
+
 .filters { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin: 36px 0 46px; }
 .filter-pill {
   padding: 9px 20px;
@@ -386,6 +396,7 @@ footer.site-footer .copyright { margin-top: 22px; font-size: 12.5px; opacity: 0.
 
 .prod-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; padding-bottom: 90px; }
 @media (max-width: 960px) { .prod-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .prod-grid { grid-template-columns: 1fr; padding-bottom: 60px; } }
 .prod-card { background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-soft); transition: transform 0.2s ease, box-shadow 0.2s ease; }
 .prod-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-card); }
 .prod-card .img { aspect-ratio: 1/1; }
@@ -409,6 +420,11 @@ footer.site-footer .copyright { margin-top: 22px; font-size: 12.5px; opacity: 0.
 .cta-banner p { font-size: 14.5px; opacity: 0.85; margin: 0; }
 .cta-banner .btn-primary { background: var(--bordeaux); color: white; }
 
+@media (max-width: 640px) {
+  .cta-banner { flex-direction: column; align-items: flex-start; gap: 20px; padding: 32px 28px; }
+  .cta-banner .btn-primary { align-self: stretch; justify-content: center; }
+}
+
 /* ================= STORIA ================= */
 .storia-banner { aspect-ratio: 16/6; overflow: hidden; }
 
@@ -416,7 +432,11 @@ footer.site-footer .copyright { margin-top: 22px; font-size: 12.5px; opacity: 0.
 .storia-seal img { height: 116px; width: auto; background: var(--white); border-radius: 50%; padding: 14px; box-shadow: var(--shadow-card); }
 
 .storia-body { padding: 66px 0 24px; display: grid; grid-template-columns: 1.3fr 1fr; gap: 70px; }
-@media (max-width: 900px) { .storia-body { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .storia-body { grid-template-columns: 1fr; gap: 44px; } }
+@media (max-width: 560px) {
+  .storia-seal img { height: 88px; padding: 10px; }
+  .storia-seal { margin: -44px 0 28px; }
+}
 .storia-body .prose p { font-size: 16px; line-height: 1.85; color: var(--ink-soft); margin-bottom: 20px; }
 .pull-quote {
   font-family: 'Fraunces', serif;
@@ -441,11 +461,17 @@ footer.site-footer .copyright { margin-top: 22px; font-size: 12.5px; opacity: 0.
 .fact-item .fact-note { font-size: 13.5px; color: var(--ink-soft); margin-top: 4px; }
 
 .storia-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; padding: 46px 0 90px; }
+@media (max-width: 560px) { .storia-gallery { grid-template-columns: repeat(2, 1fr); } }
 .storia-gallery .g1 { aspect-ratio: 1/1; }
 
 /* ================= INFO & CONTATTI ================= */
 .info-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 60px; padding: 60px 0 80px; }
-@media (max-width: 900px) { .info-grid { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .info-grid { grid-template-columns: 1fr; gap: 32px; } }
+@media (max-width: 560px) {
+  .info-grid { padding: 40px 0 50px; }
+  .info-card { padding: 26px 22px; }
+  .map-block { min-height: 280px; }
+}
 
 .info-card {
   background: var(--white);
@@ -533,4 +559,5 @@ table.hours td:last-child { text-align: right; font-weight: 600; font-variant-nu
 .ig-strip h3 { font-size: 24px; margin-bottom: 6px; }
 .ig-strip p.handle { color: var(--bordeaux); font-weight: 600; margin-bottom: 30px; }
 .ig-tiles { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; max-width: 720px; margin: 0 auto 30px; }
+@media (max-width: 560px) { .ig-tiles { grid-template-columns: repeat(3, 1fr); } }
 .ig-tiles .tile { aspect-ratio: 1/1; border-radius: var(--radius); }

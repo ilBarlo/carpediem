@@ -4,9 +4,17 @@
     var nav = document.querySelector('.topnav');
     if (!toggle || !nav) return;
 
-    toggle.addEventListener('click', function () {
+    function toggleNav() {
       var isOpen = nav.classList.toggle('nav-open');
       toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    }
+
+    toggle.addEventListener('click', toggleNav);
+    toggle.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleNav();
+      }
     });
 
     nav.querySelectorAll('.navlinks a').forEach(function (link) {
