@@ -30,17 +30,25 @@
 
 <nav class="topnav">
   <a class="logo" href="index.html"><img src="assets/img/logo-wide.png" alt="Carpe Diem Ceramiche"></a>
-  <div class="nav-toggle" role="button" tabindex="0" aria-label="Menu" aria-expanded="false">
+  <button class="nav-toggle" type="button" aria-label="Menù" aria-expanded="false" aria-controls="site-menu">
     <span></span><span></span><span></span>
-  </div>
-  <div class="navlinks">
-    <a href="index.html" data-en="Home">Home</a>
-    <a href="catalogo.html" data-en="Catalog">Catalogo</a>
-    <a href="storia.html" data-en="Our Story">La Storia</a>
-    <a href="contatti.html" data-en="Info &amp; Contact">Info &amp; Contatti</a>
-    <div class="lang-toggle">
-      <button class="lang-btn active" data-lang="it">IT</button>
-      <button class="lang-btn" data-lang="en">EN</button>
+  </button>
+  <div class="navlinks" id="site-menu">
+    <div class="nav-list">
+      <a href="index.html" data-en="Home">Home</a>
+      <a href="catalogo.html" data-en="Catalog">Catalogo</a>
+      <a href="storia.html" data-en="Our Story">La Storia</a>
+      <a href="contatti.html" data-en="Info &amp; Contact">Info &amp; Contatti</a>
+    </div>
+    <div class="nav-meta">
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="it">IT</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <a class="nav-ig" href="https://www.instagram.com/carpe_diem_ceramiche/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></svg>
+        @carpe_diem_ceramiche
+      </a>
     </div>
   </div>
 </nav>
@@ -53,12 +61,21 @@
 </div>
 
 <footer class="site-footer">
-  <a href="https://www.instagram.com/carpe_diem_ceramiche/" target="_blank" rel="noopener" class="ig">
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" stroke="white" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" stroke="white" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.1" fill="white"/></svg>
-    @carpe_diem_ceramiche
-  </a>
-  <div class="copyright" data-en="© 2026 Carpe Diem Ceramiche — All rights reserved">© 2026 Carpe Diem Ceramiche — Tutti i diritti riservati</div>
-  <div class="credit">Created by Francesco Pio Barletta — <a href="https://www.instagram.com/il_barlo/" target="_blank" rel="noopener">@il_barlo</a> · <a href="https://ilbarlo.cloud" target="_blank" rel="noopener">ilbarlo.cloud</a></div>
+  <div class="wrap footer-inner">
+    <img class="footer-mark" src="assets/img/logo-mark.png" alt="">
+    <p class="footer-sign">Carpe Diem</p>
+    <div class="footer-facts">
+      <span>Via L. Da Vinci, 12 — Grottaglie (TA)</span>
+      <span data-en="Every day, 8:30–13:00 / 14:30–21:00">Tutti i giorni, 8:30–13:00 / 14:30–21:00</span>
+      <a href="tel:+393400657599">340 065 7599</a>
+    </div>
+    <a href="https://www.instagram.com/carpe_diem_ceramiche/" target="_blank" rel="noopener" class="ig">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" stroke="white" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" stroke="white" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.1" fill="white"/></svg>
+      @carpe_diem_ceramiche
+    </a>
+    <div class="copyright" data-en="© 2026 Carpe Diem Ceramiche — All rights reserved">© 2026 Carpe Diem Ceramiche — Tutti i diritti riservati</div>
+    <div class="credit">Created by Francesco Pio Barletta — <a href="https://www.instagram.com/il_barlo/" target="_blank" rel="noopener">@il_barlo</a> · <a href="https://ilbarlo.cloud" target="_blank" rel="noopener">ilbarlo.cloud</a></div>
+  </div>
 </footer>
 
 <script src="js/nav.js"></script>

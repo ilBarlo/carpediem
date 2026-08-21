@@ -16,17 +16,25 @@
 
 <nav class="topnav">
   <a class="logo" href="index.html"><img src="assets/img/logo-wide.png" alt="Carpe Diem Ceramiche"></a>
-  <div class="nav-toggle" role="button" tabindex="0" aria-label="Menu" aria-expanded="false">
+  <button class="nav-toggle" type="button" aria-label="Menù" aria-expanded="false" aria-controls="site-menu">
     <span></span><span></span><span></span>
-  </div>
-  <div class="navlinks">
-    <a href="index.html" data-en="Home">Home</a>
-    <a href="catalogo.html" class="active" data-en="Catalog">Catalogo</a>
-    <a href="storia.html" data-en="Our Story">La Storia</a>
-    <a href="contatti.html" data-en="Info &amp; Contact">Info &amp; Contatti</a>
-    <div class="lang-toggle">
-      <button class="lang-btn active" data-lang="it">IT</button>
-      <button class="lang-btn" data-lang="en">EN</button>
+  </button>
+  <div class="navlinks" id="site-menu">
+    <div class="nav-list">
+      <a href="index.html" data-en="Home">Home</a>
+      <a href="catalogo.html" class="active" data-en="Catalog">Catalogo</a>
+      <a href="storia.html" data-en="Our Story">La Storia</a>
+      <a href="contatti.html" data-en="Info &amp; Contact">Info &amp; Contatti</a>
+    </div>
+    <div class="nav-meta">
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="it">IT</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <a class="nav-ig" href="https://www.instagram.com/carpe_diem_ceramiche/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></svg>
+        @carpe_diem_ceramiche
+      </a>
     </div>
   </div>
 </nav>
@@ -39,22 +47,86 @@
 
 <div class="wrap">
   <div class="filters reveal">
-    <button class="filter-pill active" data-en="All">Tutti</button>
-    <button class="filter-pill" data-en="Traditional Figures">Figure Tradizionali</button>
-    <button class="filter-pill" data-en="Home Décor">Complementi d'Arredo</button>
-    <button class="filter-pill" data-en="Sacred Art">Arte Sacra</button>
-    <button class="filter-pill" data-en="Wedding Favors">Bomboniere</button>
+    <button class="filter-pill active" data-cat="all" data-en="All">Tutti</button>
+    <button class="filter-pill" data-cat="tradizione" data-en="Traditional Figures">Figure Tradizionali</button>
+    <button class="filter-pill" data-cat="arredo" data-en="Home Décor">Complementi d'Arredo</button>
+    <button class="filter-pill" data-cat="sacra" data-en="Sacred Art">Arte Sacra</button>
+    <button class="filter-pill" data-cat="bomboniere" data-en="Wedding Favors">Bomboniere</button>
   </div>
 
-  <div class="prod-grid reveal">
-    <div class="prod-card"><div class="img placeholder">[Foto prodotto]</div><div class="body"><div class="cat-tag" data-en="Traditional Figures">Figure Tradizionali</div><div class="name" data-en="Pierced Pomo">Pomo Traforato</div><div class="note" data-en="Symbol of Grottaglie's tradition">Simbolo della tradizione grottagliese</div></div></div>
-    <div class="prod-card"><div class="img placeholder">[Foto prodotto]</div><div class="body"><div class="cat-tag" data-en="Traditional Figures">Figure Tradizionali</div><div class="name" data-en="Ius Primae Noctis Figure">Pupa dello Ius Primae Noctis</div><div class="note" data-en="One-of-a-kind, handmade">Pezzo unico, fatto a mano</div></div></div>
-    <div class="prod-card"><div class="img placeholder">[Foto prodotto]</div><div class="body"><div class="cat-tag" data-en="Home Décor">Complementi d'Arredo</div><div class="name" data-en="Pierced Table Lamp">Lampada da Tavolo Traforata</div><div class="note" data-en="Pierced design, warm light">Decoro traforato, luce calda</div></div></div>
-    <div class="prod-card"><div class="img placeholder">[Foto prodotto]</div><div class="body"><div class="cat-tag" data-en="Home Décor">Complementi d'Arredo</div><div class="name" data-en="Decorated Centerpiece">Centrotavola Decorato</div><div class="note" data-en="Hand-painted">Dipinto a mano</div></div></div>
-    <div class="prod-card"><div class="img placeholder">[Foto prodotto]</div><div class="body"><div class="cat-tag" data-en="Sacred Art">Arte Sacra</div><div class="name" data-en="Hand-Painted Holy Water Font">Acquasantiera Dipinta a Mano</div><div class="note" data-en="Traditional glaze">Smalto tradizionale</div></div></div>
-    <div class="prod-card"><div class="img placeholder">[Foto prodotto]</div><div class="body"><div class="cat-tag" data-en="Sacred Art">Arte Sacra</div><div class="name" data-en="Sacred Art Figurine">Statuina Arte Sacra</div><div class="note" data-en="Handcrafted">Lavorazione artigianale</div></div></div>
-    <div class="prod-card"><div class="img placeholder">[Foto prodotto]</div><div class="body"><div class="cat-tag" data-en="Wedding Favors">Bomboniere</div><div class="name" data-en="Christening Favor">Bomboniera Battesimo</div><div class="note" data-en="Customizable">Personalizzabile</div></div></div>
-    <div class="prod-card"><div class="img placeholder">[Foto prodotto]</div><div class="body"><div class="cat-tag" data-en="Wedding Favors">Bomboniere</div><div class="name" data-en="Wedding Favor">Bomboniera Matrimonio</div><div class="note" data-en="Customizable">Personalizzabile</div></div></div>
+  <div class="prod-grid is-all reveal-stagger">
+    <div class="prod-card is-featured" data-cat="tradizione">
+      <div class="frame"></div>
+      <div class="body">
+        <div class="cat-tag" data-en="Traditional Figures">Figure Tradizionali</div>
+        <div class="name" data-en="Pierced Pomo">Pomo Traforato</div>
+        <div class="note" data-en="Symbol of Grottaglie's tradition">Simbolo della tradizione grottagliese</div>
+        <a class="ask-wa" href="https://wa.me/393400657599?text=Ciao%2C%20vorrei%20informazioni%20su%20questo%20pezzo%3A%20Pomo%20Traforato" target="_blank" rel="noopener" data-en="Ask on WhatsApp">Chiedi su WhatsApp</a>
+      </div>
+    </div>
+    <div class="prod-card" data-cat="tradizione">
+      <div class="frame"></div>
+      <div class="body">
+        <div class="cat-tag" data-en="Traditional Figures">Figure Tradizionali</div>
+        <div class="name" data-en="Ius Primae Noctis Figure">Pupa dello Ius Primae Noctis</div>
+        <div class="note" data-en="One-of-a-kind, handmade">Pezzo unico, fatto a mano</div>
+        <a class="ask-wa" href="https://wa.me/393400657599?text=Ciao%2C%20vorrei%20informazioni%20su%20questo%20pezzo%3A%20Pupa%20dello%20Ius%20Primae%20Noctis" target="_blank" rel="noopener" data-en="Ask on WhatsApp">Chiedi su WhatsApp</a>
+      </div>
+    </div>
+    <div class="prod-card" data-cat="arredo">
+      <div class="frame"></div>
+      <div class="body">
+        <div class="cat-tag" data-en="Home Décor">Complementi d'Arredo</div>
+        <div class="name" data-en="Pierced Table Lamp">Lampada da Tavolo Traforata</div>
+        <div class="note" data-en="Pierced design, warm light">Decoro traforato, luce calda</div>
+        <a class="ask-wa" href="https://wa.me/393400657599?text=Ciao%2C%20vorrei%20informazioni%20su%20questo%20pezzo%3A%20Lampada%20da%20Tavolo%20Traforata" target="_blank" rel="noopener" data-en="Ask on WhatsApp">Chiedi su WhatsApp</a>
+      </div>
+    </div>
+    <div class="prod-card" data-cat="arredo">
+      <div class="frame"></div>
+      <div class="body">
+        <div class="cat-tag" data-en="Home Décor">Complementi d'Arredo</div>
+        <div class="name" data-en="Decorated Centerpiece">Centrotavola Decorato</div>
+        <div class="note" data-en="Hand-painted">Dipinto a mano</div>
+        <a class="ask-wa" href="https://wa.me/393400657599?text=Ciao%2C%20vorrei%20informazioni%20su%20questo%20pezzo%3A%20Centrotavola%20Decorato" target="_blank" rel="noopener" data-en="Ask on WhatsApp">Chiedi su WhatsApp</a>
+      </div>
+    </div>
+    <div class="prod-card" data-cat="sacra">
+      <div class="frame"></div>
+      <div class="body">
+        <div class="cat-tag" data-en="Sacred Art">Arte Sacra</div>
+        <div class="name" data-en="Hand-Painted Holy Water Font">Acquasantiera Dipinta a Mano</div>
+        <div class="note" data-en="Traditional glaze">Smalto tradizionale</div>
+        <a class="ask-wa" href="https://wa.me/393400657599?text=Ciao%2C%20vorrei%20informazioni%20su%20questo%20pezzo%3A%20Acquasantiera%20Dipinta%20a%20Mano" target="_blank" rel="noopener" data-en="Ask on WhatsApp">Chiedi su WhatsApp</a>
+      </div>
+    </div>
+    <div class="prod-card" data-cat="sacra">
+      <div class="frame"></div>
+      <div class="body">
+        <div class="cat-tag" data-en="Sacred Art">Arte Sacra</div>
+        <div class="name" data-en="Sacred Art Figurine">Statuina Arte Sacra</div>
+        <div class="note" data-en="Handcrafted">Lavorazione artigianale</div>
+        <a class="ask-wa" href="https://wa.me/393400657599?text=Ciao%2C%20vorrei%20informazioni%20su%20questo%20pezzo%3A%20Statuina%20Arte%20Sacra" target="_blank" rel="noopener" data-en="Ask on WhatsApp">Chiedi su WhatsApp</a>
+      </div>
+    </div>
+    <div class="prod-card" data-cat="bomboniere">
+      <div class="frame"></div>
+      <div class="body">
+        <div class="cat-tag" data-en="Wedding Favors">Bomboniere</div>
+        <div class="name" data-en="Christening Favor">Bomboniera Battesimo</div>
+        <div class="note" data-en="Customizable">Personalizzabile</div>
+        <a class="ask-wa" href="https://wa.me/393400657599?text=Ciao%2C%20vorrei%20informazioni%20su%20questo%20pezzo%3A%20Bomboniera%20Battesimo" target="_blank" rel="noopener" data-en="Ask on WhatsApp">Chiedi su WhatsApp</a>
+      </div>
+    </div>
+    <div class="prod-card" data-cat="bomboniere">
+      <div class="frame"></div>
+      <div class="body">
+        <div class="cat-tag" data-en="Wedding Favors">Bomboniere</div>
+        <div class="name" data-en="Wedding Favor">Bomboniera Matrimonio</div>
+        <div class="note" data-en="Customizable">Personalizzabile</div>
+        <a class="ask-wa" href="https://wa.me/393400657599?text=Ciao%2C%20vorrei%20informazioni%20su%20questo%20pezzo%3A%20Bomboniera%20Matrimonio" target="_blank" rel="noopener" data-en="Ask on WhatsApp">Chiedi su WhatsApp</a>
+      </div>
+    </div>
   </div>
 
   <div class="cta-banner reveal">
@@ -68,32 +140,27 @@
 
 
 <footer class="site-footer">
-  <a href="https://www.instagram.com/carpe_diem_ceramiche/" target="_blank" rel="noopener" class="ig">
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" stroke="white" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" stroke="white" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.1" fill="white"/></svg>
-    @carpe_diem_ceramiche
-  </a>
-  <div class="copyright" data-en="© 2026 Carpe Diem Ceramiche — All rights reserved">© 2026 Carpe Diem Ceramiche — Tutti i diritti riservati</div>
-  <div class="credit">Created by Francesco Pio Barletta — <a href="https://www.instagram.com/il_barlo/" target="_blank" rel="noopener">@il_barlo</a> · <a href="https://ilbarlo.cloud" target="_blank" rel="noopener">ilbarlo.cloud</a></div>
+  <div class="wrap footer-inner">
+    <img class="footer-mark" src="assets/img/logo-mark.png" alt="">
+    <p class="footer-sign">Carpe Diem</p>
+    <div class="footer-facts">
+      <span>Via L. Da Vinci, 12 — Grottaglie (TA)</span>
+      <span data-en="Every day, 8:30–13:00 / 14:30–21:00">Tutti i giorni, 8:30–13:00 / 14:30–21:00</span>
+      <a href="tel:+393400657599">340 065 7599</a>
+    </div>
+    <a href="https://www.instagram.com/carpe_diem_ceramiche/" target="_blank" rel="noopener" class="ig">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" stroke="white" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" stroke="white" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.1" fill="white"/></svg>
+      @carpe_diem_ceramiche
+    </a>
+    <div class="copyright" data-en="© 2026 Carpe Diem Ceramiche — All rights reserved">© 2026 Carpe Diem Ceramiche — Tutti i diritti riservati</div>
+    <div class="credit">Created by Francesco Pio Barletta — <a href="https://www.instagram.com/il_barlo/" target="_blank" rel="noopener">@il_barlo</a> · <a href="https://ilbarlo.cloud" target="_blank" rel="noopener">ilbarlo.cloud</a></div>
+  </div>
 </footer>
 
-<script>
-  var revealEls = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15 });
-    revealEls.forEach(function (el) { observer.observe(el); });
-  } else {
-    revealEls.forEach(function (el) { el.classList.add('is-visible'); });
-  }
-</script>
+<script src="js/motion.js"></script>
 <script src="js/nav.js"></script>
 <script src="js/i18n.js"></script>
+<script src="js/catalogo.js"></script>
 
 </body>
 </html>

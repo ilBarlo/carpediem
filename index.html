@@ -16,17 +16,25 @@
 
 <nav class="topnav">
   <a class="logo" href="index.html"><img src="assets/img/logo-wide.png" alt="Carpe Diem Ceramiche"></a>
-  <div class="nav-toggle" role="button" tabindex="0" aria-label="Menu" aria-expanded="false">
+  <button class="nav-toggle" type="button" aria-label="Menù" aria-expanded="false" aria-controls="site-menu">
     <span></span><span></span><span></span>
-  </div>
-  <div class="navlinks">
-    <a href="index.html" class="active" data-en="Home">Home</a>
-    <a href="catalogo.html" data-en="Catalog">Catalogo</a>
-    <a href="storia.html" data-en="Our Story">La Storia</a>
-    <a href="contatti.html" data-en="Info &amp; Contact">Info &amp; Contatti</a>
-    <div class="lang-toggle">
-      <button class="lang-btn active" data-lang="it">IT</button>
-      <button class="lang-btn" data-lang="en">EN</button>
+  </button>
+  <div class="navlinks" id="site-menu">
+    <div class="nav-list">
+      <a href="index.html" class="active" data-en="Home">Home</a>
+      <a href="catalogo.html" data-en="Catalog">Catalogo</a>
+      <a href="storia.html" data-en="Our Story">La Storia</a>
+      <a href="contatti.html" data-en="Info &amp; Contact">Info &amp; Contatti</a>
+    </div>
+    <div class="nav-meta">
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="it">IT</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <a class="nav-ig" href="https://www.instagram.com/carpe_diem_ceramiche/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></svg>
+        @carpe_diem_ceramiche
+      </a>
     </div>
   </div>
 </nav>
@@ -34,47 +42,61 @@
 <div class="hero">
   <img class="hero-ghost" src="assets/img/pumo-ink.png" alt="">
   <div class="wrap hero-grid">
-    <div>
+    <div class="hero-copy">
       <div class="eyebrow">Grottaglie · Puglia</div>
-      <h1 data-en="Handmade ceramics,&lt;br&gt;from the heart of Grottaglie.">Ceramica fatta a mano,<br>nel cuore di Grottaglie.</h1>
+      <h1 data-en="Handmade ceramics, from the heart of Grottaglie.">Ceramica fatta a mano, nel cuore di Grottaglie.</h1>
       <p class="lead" data-en="One-of-a-kind pieces shaped and decorated in our workshop, in the heart of Grottaglie's ceramics quarter.">Pezzi unici modellati e decorati nella nostra bottega, nel cuore del quartiere delle ceramiche di Grottaglie.</p>
       <a href="catalogo.html" class="btn-primary" data-en="Explore the Catalog →">Scopri il Catalogo →</a>
     </div>
-    <img class="hero-image" src="assets/img/foto/bottega-interno-01.jpg" alt="Interno della bottega Carpe Diem Ceramiche">
+    <div class="hero-photo">
+      <img class="hero-image" src="assets/img/foto/bottega-interno-01.jpg" alt="Interno della bottega Carpe Diem Ceramiche">
+    </div>
   </div>
 </div>
 
 <div class="section-white">
-  <div class="wrap reveal">
-    <div class="section-head">
+  <div class="wrap">
+    <div class="section-head reveal">
       <div class="eyebrow" data-en="The Catalog">Il Catalogo</div>
       <h2 data-en="Every piece, a different story">Ogni pezzo, una storia diversa</h2>
       <p data-en="From traditional Grottaglie figures to home décor pieces, each category tells part of our story.">Dalle figure della tradizione grottagliese ai complementi d'arredo, ogni categoria racconta una parte del nostro lavoro.</p>
     </div>
-    <div class="cat-grid">
-      <div class="cat-card">
-        <div class="img placeholder"><span class="tag-label" data-en="Traditional Figures">Figure Tradizionali</span></div>
-        <div class="body"><span class="count" data-en="Roosters, pomi, pupe &amp; knights">Galletti, pomi, pupe e cavalieri</span></div>
-      </div>
-      <div class="cat-card">
-        <div class="img placeholder"><span class="tag-label" data-en="Home Décor">Complementi d'Arredo</span></div>
-        <div class="body"><span class="count" data-en="Lamps, wall sconces, centerpieces">Lampade, applique, centrotavola</span></div>
-      </div>
-      <div class="cat-card">
-        <div class="img placeholder"><span class="tag-label" data-en="Sacred Art">Arte Sacra</span></div>
-        <div class="body"><span class="count" data-en="Holy water fonts &amp; sacred art">Acquasantiere e arte sacra</span></div>
-      </div>
-      <div class="cat-card">
-        <div class="img placeholder"><span class="tag-label" data-en="Wedding Favors">Bomboniere</span></div>
-        <div class="body"><span class="count" data-en="Made to order for any occasion">Su misura per ogni evento</span></div>
-      </div>
+    <div class="cat-grid reveal-stagger">
+      <a class="cat-card" href="catalogo.html#tradizione">
+        <div class="frame"></div>
+        <div class="body">
+          <h3 data-en="Traditional Figures">Figure Tradizionali</h3>
+          <span class="count" data-en="Roosters, pomi, pupe &amp; knights">Galletti, pomi, pupe e cavalieri</span>
+        </div>
+      </a>
+      <a class="cat-card" href="catalogo.html#arredo">
+        <div class="frame"></div>
+        <div class="body">
+          <h3 data-en="Home Décor">Complementi d'Arredo</h3>
+          <span class="count" data-en="Lamps, wall sconces, centerpieces">Lampade, applique, centrotavola</span>
+        </div>
+      </a>
+      <a class="cat-card" href="catalogo.html#sacra">
+        <div class="frame"></div>
+        <div class="body">
+          <h3 data-en="Sacred Art">Arte Sacra</h3>
+          <span class="count" data-en="Holy water fonts &amp; sacred art">Acquasantiere e arte sacra</span>
+        </div>
+      </a>
+      <a class="cat-card" href="catalogo.html#bomboniere">
+        <div class="frame"></div>
+        <div class="body">
+          <h3 data-en="Wedding Favors">Bomboniere</h3>
+          <span class="count" data-en="Made to order for any occasion">Su misura per ogni evento</span>
+        </div>
+      </a>
     </div>
   </div>
 </div>
 
 <div class="section-pietra">
   <div class="wrap storia-teaser reveal">
-    <div class="img placeholder">[Foto artigiano al tornio]</div>
+    <div class="frame"></div>
     <div>
       <div class="eyebrow" data-en="Our Story">La Nostra Storia</div>
       <h2 data-en="Seizing the day, always">Cogliere l'attimo, da sempre</h2>
@@ -116,7 +138,7 @@
       <button class="rev-nav prev" aria-label="Precedente">‹</button>
       <div class="reviews-track" id="reviewsTrack">
         <div class="review-card">
-          <div class="stars">★★★★★</div>
+          <div class="review-source"><svg class="google-g" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.874 2.684-6.615z"/><path fill="#34A853" d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332C2.438 15.983 5.482 18 9 18z"/><path fill="#FBBC05" d="M3.964 10.71c-.18-.54-.282-1.117-.282-1.71s.102-1.17.282-1.71V4.958H.957C.347 6.173 0 7.548 0 9s.348 2.827.957 4.042l3.007-2.332z"/><path fill="#EA4335" d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0 5.482 0 2.438 2.017.957 4.958L3.964 7.29C4.672 5.163 6.656 3.58 9 3.58z"/></svg><span>★★★★★</span></div>
           <p class="review-text" data-en="He's the best ceramic craftsman in Grottaglie!!!
 I've been his customer for years and I recommend everyone stop by to admire his masterpieces!">Il più bravo artigiano delle creazioni ceramiche di grottaglie e lui!!!
 Sono da anni sua cliente e consiglio a tutti di passare ad ammirare i suoi capolavori!</p>
@@ -126,7 +148,7 @@ Sono da anni sua cliente e consiglio a tutti di passare ad ammirare i suoi capol
           </div>
         </div>
         <div class="review-card">
-          <div class="stars">★★★★★</div>
+          <div class="review-source"><svg class="google-g" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.874 2.684-6.615z"/><path fill="#34A853" d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332C2.438 15.983 5.482 18 9 18z"/><path fill="#FBBC05" d="M3.964 10.71c-.18-.54-.282-1.117-.282-1.71s.102-1.17.282-1.71V4.958H.957C.347 6.173 0 7.548 0 9s.348 2.827.957 4.042l3.007-2.332z"/><path fill="#EA4335" d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0 5.482 0 2.438 2.017.957 4.958L3.964 7.29C4.672 5.163 6.656 3.58 9 3.58z"/></svg><span>★★★★★</span></div>
           <p class="review-text" data-en="I went with my wife to Leonardo's workshop, and we were immediately struck by the huge variety and beauty of the pieces on display. Leonardo was warm and friendly, and told us about the story and character behind his handmade work — all beautifully crafted and unique, showing just how much passion he puts into what he does.
 We had to pick two gifts for friends of ours, and he recommended the best options for what we needed — we were truly spoiled for choice.
 For us he's the go-to place for gifts that really make an impression. Highly recommended.">Sono andato con mia moglie nella bottega di Leonardo, siamo stati subito colpiti dalla grandissima varietà e bellezza delle opere esposte. Leonardo è stato molto affabile e cordiale, ci ha raccontato la particolarità e la storia delle sue opere artigianali, tutte di ottima fattura e particolari, facendo trasparire tutta la sua passione in quello che fa.
@@ -137,7 +159,7 @@ Per noi è un punto di riferimento per la scelta di regali che facciano effetto,
           </div>
         </div>
         <div class="review-card">
-          <div class="stars">★★★★★</div>
+          <div class="review-source"><svg class="google-g" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.874 2.684-6.615z"/><path fill="#34A853" d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332C2.438 15.983 5.482 18 9 18z"/><path fill="#FBBC05" d="M3.964 10.71c-.18-.54-.282-1.117-.282-1.71s.102-1.17.282-1.71V4.958H.957C.347 6.173 0 7.548 0 9s.348 2.827.957 4.042l3.007-2.332z"/><path fill="#EA4335" d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0 5.482 0 2.438 2.017.957 4.958L3.964 7.29C4.672 5.163 6.656 3.58 9 3.58z"/></svg><span>★★★★★</span></div>
           <p class="review-text" data-en="As you choose, watching the skill behind each piece, you listen to the story of a life that began out of passion and became an art workshop.
 Bought an oil cruet, a cutting board, a candle holder and a lucky pomegranate.
 Not to be missed.">Mentre scegli osservando la maestria di ogni realizzazione, ascolti i racconti di una vita iniziata per passione e realizzata con apertura bottega d'arte.
@@ -148,7 +170,7 @@ Acquistato oliera, taglliere, porta candela e melagrana che porta fortuna. Da no
           </div>
         </div>
         <div class="review-card">
-          <div class="stars">★★★★★</div>
+          <div class="review-source"><svg class="google-g" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.874 2.684-6.615z"/><path fill="#34A853" d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332C2.438 15.983 5.482 18 9 18z"/><path fill="#FBBC05" d="M3.964 10.71c-.18-.54-.282-1.117-.282-1.71s.102-1.17.282-1.71V4.958H.957C.347 6.173 0 7.548 0 9s.348 2.827.957 4.042l3.007-2.332z"/><path fill="#EA4335" d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0 5.482 0 2.438 2.017.957 4.958L3.964 7.29C4.672 5.163 6.656 3.58 9 3.58z"/></svg><span>★★★★★</span></div>
           <p class="review-text" data-en="Leonardo feels like family by now.
 Plates, lamps, nativity figures, and finally the wedding favors for our big day. We chose and personalized them together with him — he has endless patience when it comes to explaining his work and giving advice. A wonderful craftsman and artist.
 We'll keep coming back. Needless to say, our guests were delighted.">Leonardo ormai è di famiglia. Servizi di piatti, lampade, presepi e per finire le bomboniere per il nostro grande giorno. Le abbiamo scelte e personalizzate insieme a lui che ha una pazienza infinita quando si tratta di spiegare il suo lavoro e dare consigli. Un artigiano ed un artista fantastico.
@@ -158,11 +180,33 @@ Continueremo a tornare. Inutile specificare che i nostri ospiti sono rimasti ent
           </div>
         </div>
         <div class="review-card">
-          <div class="stars">★★★★★</div>
+          <div class="review-source"><svg class="google-g" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.874 2.684-6.615z"/><path fill="#34A853" d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332C2.438 15.983 5.482 18 9 18z"/><path fill="#FBBC05" d="M3.964 10.71c-.18-.54-.282-1.117-.282-1.71s.102-1.17.282-1.71V4.958H.957C.347 6.173 0 7.548 0 9s.348 2.827.957 4.042l3.007-2.332z"/><path fill="#EA4335" d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0 5.482 0 2.438 2.017.957 4.958L3.964 7.29C4.672 5.163 6.656 3.58 9 3.58z"/></svg><span>★★★★★</span></div>
           <p class="review-text" data-en="A truly wonderful ceramics workshop! The moment you walk in, you can feel the passion and love for this craft. The shop is charming, welcoming and full of one-of-a-kind pieces, all handmade by the owner — a true artist who creates every piece with great care and skill!!! If you're looking for authenticity, quality and real craftsmanship, this is the place. Highly recommended!">Un laboratorio di ceramica davvero meraviglioso! Appena si entra si percepisce la passione e l'amore per questo mestiere. Il negozio è grazioso, accogliente e ricco di pezzi unici, realizzati interamente a mano dal proprietario, un vero artista che crea ogni opera con grande cura e maestria!!! Se cercate autenticità, qualità e artigianato vero, questo è il posto giusto. Consigliatissimo!</p>
           <div class="review-author">
             <span class="name">Valentina Faraone</span>
             <span class="meta" data-en="Local Guide">Local Guide</span>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-source"><svg class="fb-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#1877F2"/><path fill="#fff" d="M15.5 8.5h-1.6c-.3 0-.6.3-.6.7v1.4h2.1l-.3 2.2h-1.8V19h-2.3v-6.2H9.3v-2.2h1.7V9c0-1.7 1-2.9 2.7-2.9h1.8v2.4z"/></svg><span data-en="Recommends">Consiglia</span></div>
+          <p class="review-text" data-en="Leonardo is a true master! Originality, seriousness, expertise and professionalism are qualities that define his work, and they make the pieces created by his skilled hands real and true masterpieces of art!">Leonardo un vero maestro!originalita',serieta',competenza e professionalità sono doti che contraddistinguono il suo lavoro e fanno dei suoi oggetti creati con le sue sapienti mani dei veri e propri CAPOLAVORI d'arte!</p>
+          <div class="review-author">
+            <span class="name">Lina Fabbiano</span>
+            <span class="meta" data-en="via Facebook">via Facebook</span>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-source"><svg class="fb-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#1877F2"/><path fill="#fff" d="M15.5 8.5h-1.6c-.3 0-.6.3-.6.7v1.4h2.1l-.3 2.2h-1.8V19h-2.3v-6.2H9.3v-2.2h1.7V9c0-1.7 1-2.9 2.7-2.9h1.8v2.4z"/></svg><span data-en="Recommends">Consiglia</span></div>
+          <p class="review-text" data-en="Leonardo and his art were a truly delightful surprise.
+His work is really wonderful, made with great skill and cared for down to the smallest detail.
+His ability to explain all the traditions behind his pieces also makes the experience even more memorable.
+If you're in Grottaglie and want to bring home a real work of art, Carpe Diem is a must-visit.">Leonardo e la sua arte sono state davvero una piacevolissima sorpresa.
+Le sue opere sono davvero una meraviglia, create con maestria e curate nei minimi particolari.
+Inoltre la sua capacità di illustrare tutte le tradizioni che si celano dietro le sue opere rende l'esperienza ancora più indimenticabile.
+Se andate a Grottaglie e avete voglia di portarvi a casa una vera opera d'arte, Carpe Diem è una tappa obbligatoria!</p>
+          <div class="review-author">
+            <span class="name">Alessia Schiavo</span>
+            <span class="meta" data-en="via Facebook">via Facebook</span>
           </div>
         </div>
       </div>
@@ -176,35 +220,25 @@ Continueremo a tornare. Inutile specificare che i nostri ospiti sono rimasti ent
   </div>
 </div>
 
-<div class="signature-mark reveal">
-  <img src="assets/img/logo-mark.png" alt="Carpe Diem Ceramiche">
-</div>
-
 <footer class="site-footer">
-  <a href="https://www.instagram.com/carpe_diem_ceramiche/" target="_blank" rel="noopener" class="ig">
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" stroke="white" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" stroke="white" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.1" fill="white"/></svg>
-    @carpe_diem_ceramiche
-  </a>
-  <div class="copyright" data-en="© 2026 Carpe Diem Ceramiche — All rights reserved">© 2026 Carpe Diem Ceramiche — Tutti i diritti riservati</div>
-  <div class="credit">Created by Francesco Pio Barletta — <a href="https://www.instagram.com/il_barlo/" target="_blank" rel="noopener">@il_barlo</a> · <a href="https://ilbarlo.cloud" target="_blank" rel="noopener">ilbarlo.cloud</a></div>
+  <div class="wrap footer-inner">
+    <img class="footer-mark" src="assets/img/logo-mark.png" alt="">
+    <p class="footer-sign">Carpe Diem</p>
+    <div class="footer-facts">
+      <span>Via L. Da Vinci, 12 — Grottaglie (TA)</span>
+      <span data-en="Every day, 8:30–13:00 / 14:30–21:00">Tutti i giorni, 8:30–13:00 / 14:30–21:00</span>
+      <a href="tel:+393400657599">340 065 7599</a>
+    </div>
+    <a href="https://www.instagram.com/carpe_diem_ceramiche/" target="_blank" rel="noopener" class="ig">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" stroke="white" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" stroke="white" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.1" fill="white"/></svg>
+      @carpe_diem_ceramiche
+    </a>
+    <div class="copyright" data-en="© 2026 Carpe Diem Ceramiche — All rights reserved">© 2026 Carpe Diem Ceramiche — Tutti i diritti riservati</div>
+    <div class="credit">Created by Francesco Pio Barletta — <a href="https://www.instagram.com/il_barlo/" target="_blank" rel="noopener">@il_barlo</a> · <a href="https://ilbarlo.cloud" target="_blank" rel="noopener">ilbarlo.cloud</a></div>
+  </div>
 </footer>
 
-<script>
-  var revealEls = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window) {
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15 });
-    revealEls.forEach(function (el) { observer.observe(el); });
-  } else {
-    revealEls.forEach(function (el) { el.classList.add('is-visible'); });
-  }
-</script>
+<script src="js/motion.js"></script>
 <script src="js/nav.js"></script>
 <script src="js/reviews.js"></script>
 <script src="js/i18n.js"></script>
