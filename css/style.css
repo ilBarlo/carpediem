@@ -129,21 +129,45 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 html.nav-lock,
 html.nav-lock body { overflow: hidden; }
+html.nav-lock body { touch-action: none; }
 
 @media (max-width: 780px) {
-  .topnav { padding: 12px 20px; position: sticky; }
-  .topnav .logo img { height: 40px; }
-  .topnav.nav-open {
-    background: var(--pietra-soft);
-    border-bottom-color: transparent;
+  body { padding-top: 65px; }
+  .topnav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 12px 20px;
+    background: transparent;
     backdrop-filter: none;
   }
-  .nav-toggle { display: block; }
+  .topnav::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: rgba(250, 249, 246, 0.94);
+    backdrop-filter: blur(8px);
+    pointer-events: none;
+  }
+  .topnav.nav-open::before {
+    background: var(--pietra-soft);
+    backdrop-filter: none;
+  }
+  .topnav .logo { z-index: 3; }
+  .topnav .logo img { height: 40px; }
+  .nav-toggle {
+    display: block;
+    z-index: 3;
+  }
 
   .navlinks {
     position: fixed;
     inset: 0;
     z-index: 1;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -156,6 +180,9 @@ html.nav-lock body { overflow: hidden; }
     pointer-events: none;
     transform: translateY(-6px);
     transition: opacity 0.28s ease, transform 0.28s ease, visibility 0s linear 0.28s;
+  }
+  .topnav.nav-open {
+    border-bottom-color: transparent;
   }
   .topnav.nav-open .navlinks {
     opacity: 1;

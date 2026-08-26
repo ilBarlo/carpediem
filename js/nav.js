@@ -2,6 +2,7 @@
   document.addEventListener('DOMContentLoaded', function () {
     var toggle = document.querySelector('.nav-toggle');
     var nav = document.querySelector('.topnav');
+    var lockY = 0;
     if (!toggle || !nav) return;
 
     function label(isOpen) {
@@ -14,7 +15,23 @@
       nav.classList.toggle('nav-open', isOpen);
       toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
       toggle.setAttribute('aria-label', label(isOpen));
-      document.documentElement.classList.toggle('nav-lock', isOpen);
+      if (isOpen) {
+        lockY = window.scrollY || window.pageYOffset || 0;
+        document.body.style.position = 'fixed';
+        document.body.style.top = '-' + lockY + 'px';
+        document.body.style.left = '0';
+        document.body.style.right = '0';
+        document.body.style.width = '100%';
+        document.documentElement.classList.add('nav-lock');
+      } else {
+        document.documentElement.classList.remove('nav-lock');
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.left = '';
+        document.body.style.right = '';
+        document.body.style.width = '';
+        window.scrollTo(0, lockY);
+      }
     }
 
     toggle.addEventListener('click', function () {
