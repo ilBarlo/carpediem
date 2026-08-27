@@ -46,14 +46,14 @@
 </div>
 
 <div class="wrap">
-  <div class="filters reveal">
+  <div class="filters appear">
     <button class="filter-pill active" data-cat="all" data-en="All">Tutti</button>
     <button class="filter-pill" data-cat="pumi" data-en="Pumi">Pumi</button>
     <button class="filter-pill" data-cat="arredo" data-en="Home &amp; Table">Arredo e tavola</button>
     <button class="filter-pill" data-cat="sacra" data-en="Sacred Art">Arte Sacra</button>
   </div>
 
-  <div class="prod-grid is-all reveal-stagger">
+  <div class="prod-grid is-all appear-in">
     <div class="prod-card is-featured" data-cat="pumi">
       <div class="frame"><img src="assets/img/foto/web/pumi-dipinti.jpg" alt="Tris di pumi dipinti a mano"></div>
       <div class="body">
@@ -191,7 +191,7 @@
     </div>
   </div>
 
-  <div class="cta-banner reveal">
+  <div class="cta-banner appear">
     <div>
       <h3 data-en="Can't find what you're looking for?">Non trovi quello che cerchi?</h3>
       <p data-en="We also make wedding favors and custom pieces on request — write to us and tell us your idea.">Realizziamo anche bomboniere e pezzi su misura — scrivici per raccontarci la tua idea.</p>
@@ -200,6 +200,22 @@
   </div>
 </div>
 
+<div class="look" id="look" hidden role="dialog" aria-modal="true" aria-labelledby="look-name">
+  <button class="look-close" type="button" aria-label="Chiudi">×</button>
+  <button class="look-nav prev" type="button" aria-label="Precedente">‹</button>
+  <div class="look-stage">
+    <img alt="">
+  </div>
+  <button class="look-nav next" type="button" aria-label="Successiva">›</button>
+  <div class="look-caption">
+    <div class="look-cat"></div>
+    <div class="look-name" id="look-name"></div>
+    <div class="look-bar">
+      <span class="look-count"></span>
+      <a class="look-wa" href="#" target="_blank" rel="noopener" data-en="Ask on WhatsApp">Chiedi su WhatsApp</a>
+    </div>
+  </div>
+</div>
 
 <footer class="site-footer">
   <div class="wrap footer-inner">
@@ -223,6 +239,7 @@
 <script src="js/nav.js"></script>
 <script src="js/i18n.js"></script>
 <script src="js/catalogo.js"></script>
+<script src="js/ask.js"></script>
 
 </body>
 </html>

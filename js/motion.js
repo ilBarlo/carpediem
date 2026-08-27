@@ -11,8 +11,17 @@
             observer.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
-      els.forEach(function (el) { observer.observe(el); });
+        }, { threshold: 0, rootMargin: '80px 0px 80px 0px' });
+        els.forEach(function (el) { observer.observe(el); });
+        requestAnimationFrame(function () {
+          els.forEach(function (el) {
+            var r = el.getBoundingClientRect();
+            if (r.bottom > 0 && r.top < window.innerHeight) {
+              el.classList.add('is-visible');
+              observer.unobserve(el);
+            }
+          });
+        });
     } else {
       els.forEach(function (el) { el.classList.add('is-visible'); });
     }
