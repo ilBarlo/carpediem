@@ -30,7 +30,7 @@ JOBS = [
     ("IMG_7551.HEIC", "piatto-cristo", 0, 0.86, 1400),
     ("IMG_7552.HEIC", "crocifisso", 0, 0.72, 1400),
     ("IMG_7553.HEIC", "statuina-santo", 0, 0.68, 1400),
-    ("IMG_7548.HEIC", "vassoio-angeli", 0, 0.82, 1400),
+    ("IMG_7548.HEIC", "acquasantiera-angeli", 0, 0.82, 1400),
     ("IMG_7572.HEIC", "presepe", 0, 0.78, 1400),
     ("IMG_7585.HEIC", "artigiano", 0, 0.82, 1400),
     ("IMG_7545.HEIC", "scaffale-bottega", 0, 1.15, 1400),
