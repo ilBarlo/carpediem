@@ -10,7 +10,7 @@
       wa: 'Scrivici su WhatsApp',
       qs: [
         { id: 'order', q: 'Come si ordina?', a: 'In bottega, via WhatsApp o dal modulo contatti. Indicaci il pezzo e ti confermiamo disponibilità, tempi e spedizione.' },
-        { id: 'where', q: 'Dove ci troviamo?', a: 'Via L. Da Vinci, 12 — Grottaglie (TA), nel Quartiere delle Ceramiche.' },
+        { id: 'where', q: 'Dove ci troviamo?', a: 'Via L. da Vinci, 12 — Grottaglie (TA), nel Quartiere delle Ceramiche.' },
         { id: 'what', q: 'Cosa fate?', a: 'Ceramica fatta a mano: pumi, arredo e tavola, arte sacra, Natale, Pasqua ed Estate. Su richiesta anche bomboniere e pezzi su misura.' },
         { id: 'ship', q: 'Spedite?', a: 'Sì, in tutta Italia e nel mondo, con imballaggi sicuri.' },
         { id: 'hours', q: 'Quali sono gli orari?', a: 'Tutti i giorni, 8:30–13:00 / 14:30–21:00.' },
@@ -27,7 +27,7 @@
       wa: 'Message us on WhatsApp',
       qs: [
         { id: 'order', q: 'How do I order?', a: 'In the workshop, via WhatsApp, or through the contact form. Tell us the piece and we’ll confirm availability, timing and shipping.' },
-        { id: 'where', q: 'Where are you?', a: 'Via L. Da Vinci, 12 — Grottaglie (TA), in the Ceramics Quarter.' },
+        { id: 'where', q: 'Where are you?', a: 'Via L. da Vinci, 12 — Grottaglie (TA), in the Ceramics Quarter.' },
         { id: 'what', q: 'What do you make?', a: 'Handmade ceramics: pumi, home & table, sacred art, Christmas, Easter and Summer. Wedding favors and custom pieces on request.' },
         { id: 'ship', q: 'Do you ship?', a: 'Yes — across Italy and worldwide, with secure packaging.' },
         { id: 'hours', q: 'What are your hours?', a: 'Every day, 8:30–13:00 / 14:30–21:00.' },
