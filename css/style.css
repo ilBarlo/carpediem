@@ -600,7 +600,7 @@ html.nav-lock body { touch-action: none; }
   gap: 60px;
   align-items: center;
 }
-.info-teaser .map { aspect-ratio: 4/3; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); }
+.info-teaser .map { aspect-ratio: 4/3; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); position: relative; }
 .info-teaser h2 { font-size: 30px; margin: 10px 0 18px; }
 .info-teaser .line { display: flex; gap: 10px; margin-bottom: 10px; font-size: 15px; color: var(--ink-soft); }
 .info-teaser .line b { color: var(--ink); font-weight: 700; min-width: 92px; display: inline-block; font-family: 'Archivo', sans-serif; }
@@ -1067,6 +1067,24 @@ form.contact-form textarea:focus {
 }
 form.contact-form .honeypot { position: absolute; left: -9999px; }
 form.contact-form button.btn-primary { align-self: flex-start; margin-top: 6px; }
+form.contact-form .privacy-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 8px 0 4px;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+form.contact-form .privacy-check input {
+  margin-top: 3px;
+  accent-color: var(--bordeaux);
+  width: auto;
+  padding: 0;
+  background: none;
+  border: none;
+}
+form.contact-form .privacy-check a { color: var(--bordeaux); font-weight: 600; }
 
 table.hours { width: 100%; border-collapse: collapse; margin-top: 6px; }
 table.hours td { padding: 6px 0; font-size: 14.5px; }
@@ -1074,7 +1092,93 @@ table.hours td:first-child { color: var(--ink-soft); }
 table.hours td:last-child { text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
 
 .map-block { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); position: relative; height: 100%; min-height: 380px; }
-.map-open-btn { position: absolute; bottom: 20px; left: 20px; }
+.map-open-btn { position: absolute; bottom: 20px; left: 20px; z-index: 3; }
+.map-wrap { position: relative; }
+.map-cover {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 28px;
+  text-align: center;
+  background: var(--pietra-soft);
+}
+.map-cover[hidden] { display: none; }
+.map-cover p {
+  margin: 0;
+  max-width: 28ch;
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+.cookie-bar {
+  position: fixed;
+  left: 18px;
+  right: 18px;
+  bottom: max(18px, env(safe-area-inset-bottom));
+  z-index: 180;
+  max-width: 420px;
+  padding: 18px 18px 16px;
+  background: var(--white);
+  border: 1px solid var(--pietra-line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+}
+.cookie-bar[hidden] { display: none; }
+.cookie-bar .cookie-text {
+  margin: 0 0 14px;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+.cookie-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+}
+.cookie-accept {
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: var(--radius);
+  background: var(--bordeaux);
+  color: white;
+}
+.cookie-needed {
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 4px;
+  color: var(--ink-soft);
+}
+.cookie-needed:hover { color: var(--ink); }
+.cookie-more {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--bordeaux);
+  margin-left: auto;
+}
+.cookie-more:hover { border-bottom: 1px solid var(--bordeaux); }
+html:not(.site-open) .cookie-bar { display: none !important; }
+@media (max-width: 560px) {
+  .cookie-bar { bottom: max(88px, calc(18px + env(safe-area-inset-bottom))); }
+}
+@media print { .cookie-bar { display: none; } }
+.footer-legal { margin-top: 14px; font-size: 12px; opacity: 0.55; }
+.footer-legal a:hover { color: white; opacity: 1; }
+.privacy-page { max-width: 680px; margin: 0 auto 80px; }
+.privacy-page h2 { font-size: 22px; margin: 32px 0 10px; }
+.privacy-page p, .privacy-page li { color: var(--ink-soft); font-size: 15px; line-height: 1.65; }
+.privacy-page ul { padding-left: 1.2em; margin: 0 0 14px; }
+.privacy-page li { margin: 0 0 8px; }
+.privacy-page a { color: var(--bordeaux); font-weight: 600; }
+.privacy-updated { margin-top: 8px; font-size: 13px; color: var(--ink-soft) !important; }
 
 .ig-strip { background: var(--pietra-soft); padding: 64px 24px 80px; text-align: center; border-top: 1px solid var(--pietra-line); }
 .ig-card {

@@ -105,7 +105,8 @@
 
   <div class="map-block">
     <iframe
-      src="https://www.google.com/maps?q=Carpe+Diem+Ceramiche+Via+L.+da+Vinci+12+Grottaglie+TA&output=embed"
+      data-map-src="https://www.google.com/maps?q=Carpe+Diem+Ceramiche+Via+L.+da+Vinci+12+Grottaglie+TA&output=embed"
+      title="Mappa della bottega"
       width="100%" height="100%" style="border:0; min-height:380px;"
       allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
     </iframe>
@@ -137,6 +138,10 @@
         <label for="messaggio" data-en="Message">Messaggio</label>
         <textarea id="messaggio" name="messaggio" rows="5" required></textarea>
       </div>
+      <label class="privacy-check">
+        <input type="checkbox" name="privacy" value="sì" required>
+        <span data-en="I have read the <a href=&quot;privacy.html&quot;>privacy notice</a> and agree to the processing of my data so you can get back to me.">Ho letto l'<a href="privacy.html">informativa privacy</a> e acconsento al trattamento dei dati per essere ricontattato.</span>
+      </label>
       <button type="submit" class="btn-primary" data-en="Send message">Invia messaggio</button>
     </form>
   </div>
@@ -172,6 +177,7 @@
       @carpe_diem_ceramiche
     </a>
     <div class="copyright" data-en="© 2026 Carpe Diem Ceramiche — All rights reserved">© 2026 Carpe Diem Ceramiche — Tutti i diritti riservati</div>
+    <div class="footer-legal"><a href="privacy.html" data-en="Privacy &amp; cookies">Privacy e cookie</a></div>
     <div class="credit">
       <span>Created by Francesco Pio Barletta</span>
       <a class="credit-brand" href="https://ilbarlo.cloud" target="_blank" rel="noopener">
@@ -185,6 +191,7 @@
 <script src="js/motion.js"></script>
 <script src="js/nav.js"></script>
 <script src="js/i18n.js"></script>
+<script src="js/cookies.js"></script>
 <script src="js/ask.js"></script>
 
 </body>
